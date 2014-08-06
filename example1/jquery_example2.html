@@ -1,0 +1,75 @@
+<html>
+    
+    <head>
+        
+        <title>Working with jQuery</title> 
+        
+        <style>
+                p {
+                    margin: 20px 0 0;
+                }
+    
+                b {
+                    color: blue;
+                }
+            
+        </style>
+        
+    </head>
+    
+    
+    <body>
+        
+            
+            <input id="check1" type="checkbox" checked="checked">
+            <label for="check1" id="lblId">Check me</label>
+            <p></p>
+        
+        
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        
+        <script>
+            
+                $( "input" ).change(function() {
+                var $input = $( this );
+                $( "p" ).html( ".attr( 'checked' ): " + $input.attr( "checked" ) + "" +
+                ".prop( 'checked' ): " + $input.prop( "checked" ) + "" +
+                ".is( ':checked' ): " + $input.is( ":checked" ) + "" );
+                })
+                .change();
+      
+                $(document).ready(function(){
+                    
+                   //jquery function as getter 
+                    
+                   console.log($('#lblId').attr('for'));
+                  
+                  //jquery function as setter
+                  
+                   $('#lblId').attr('for','jahangir');
+                  console.log($('#lblId').attr('for'));
+                  
+                  //jquery function as setter & getter
+                    
+                    console.log($('#lblId').attr('for','ifti').attr('for'));
+                    
+                  //setting css using jquery function
+                  
+                  $('#lblId').css({'background-color' : 'green', 'display' : 'block', 'wdith' : '100px' });
+                            
+                            
+                          
+                            
+                    
+                });
+       
+        </script>
+        
+        
+        
+    </body>
+    
+    
+    
+    
+</html>
